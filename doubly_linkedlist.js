@@ -92,6 +92,17 @@ class DoublyLinkedLIst{
             this.tail.next = null;
         }
     }
+
+    find(value){
+        let current = this.head;
+        while(current) {
+            if(current.data === value) {
+                return current.data;
+            }
+            current = current.next;
+        }
+        return "not found";
+    }
 }
 
 let dll  = new DoublyLinkedLIst();
@@ -106,3 +117,4 @@ dll.printListBackward();
 dll.printListForward();
 dll.removeLast();
 dll.printListForward();
+console.log(dll.find(5));
