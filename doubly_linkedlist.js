@@ -71,5 +71,6 @@ let dll  = new DoublyLinkedLIst();
 
 dll.addAtBeginnig(10);
 dll.addAtEnd(20);
+dll.addAtBeginnig(50);
 dll.printListForward();
 dll.printListBackward();
