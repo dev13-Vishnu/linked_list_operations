@@ -65,6 +65,33 @@ class DoublyLinkedLIst{
         }
         console.log(elements.join('->'));
     }
+
+    removeFirst(){
+        if(!this.head) {
+            console.log("List is empty");
+            return;
+        }
+        if(this.head === this.tail){
+            this.head = this.tail = null;
+        }else{
+            this.head = this.head.next;
+            this.head.prev = null;
+        }
+    }
+
+
+    removeLast(){
+        if(!this.head){
+            console.log("List is empty");
+            return;
+        }
+        if (this.head === this.tail) {
+            this.head = this.tail = null;
+        } else {
+            this.tail = this.tail.prev;
+            this.tail.next = null;
+        }
+    }
 }
 
 let dll  = new DoublyLinkedLIst();
@@ -72,5 +99,10 @@ let dll  = new DoublyLinkedLIst();
 dll.addAtBeginnig(10);
 dll.addAtEnd(20);
 dll.addAtBeginnig(50);
+dll.addAtEnd(32);
+dll.addAtEnd(56); 
 dll.printListForward();
 dll.printListBackward();
+dll.printListForward();
+dll.removeLast();
+dll.printListForward();
