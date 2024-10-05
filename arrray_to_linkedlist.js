@@ -35,4 +35,3 @@ let arr = [ 2, 4, 6];
 let linkedList = arrayToLinkedList(arr);
 
 printLinkedList(linkedList);
-
