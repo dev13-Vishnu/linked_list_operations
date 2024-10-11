@@ -52,7 +52,7 @@ class DoublyLinkedLIst{
             elements.push(current.data);
             current = current.next;
         }
-        console.log(elements.join('->'));
+        console.log(elements.join('<->'));
     }
 
     printListBackward() {
@@ -63,7 +63,7 @@ class DoublyLinkedLIst{
             elements.push(current.data);
             current = current.prev;
         }
-        console.log(elements.join('->'));
+        console.log(elements.join('<->'));
     }
 
     removeFirst(){
